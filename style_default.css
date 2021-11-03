@@ -1,0 +1,103 @@
+@font-face {
+	src: url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62,100;125,900&display=swap');
+  font-family:'Archivo', sans-serif;
+}
+
+body{
+  padding: 0;
+  margin: 0x;
+  font-size: 30px;
+  font-family: 'Archivo', sans-serif;
+  width: 100vh;
+  height: 100vh;
+  margin: 0;
+}
+
+p, #tab_grid{
+    opacity: 0;
+}
+
+
+  #texto1, #texto2, #texto3 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+
+    /*  divisão */
+    .split {
+      height: 100%;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      padding-top: 20px;
+      opacity: 0;
+      transition: opacity 2s, width 2s, height 2s;
+    }
+    
+    /* lado esquerdo */
+    .left {
+      left: 0;
+      background-color: white;
+      color: black;
+      border: 0;
+    }
+  
+    
+    /* lado direito*/
+    .right {
+      right: 0;
+      background-color: black;
+      color: white;
+      border: 0;
+    }
+
+    
+    /* centrar */
+    .button {
+      font-size: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    
+
+  #fadeout1, #fadeout2 {
+      opacity: 1;
+      transition: opacity 5.5s;
+    }
+
+    .alterar{
+      opacity: 0;
+    }
+
+  
+  @media screen and (max-width: 600px) {
+    body{
+        font-size: 20px;
+      }
+
+    .split {
+        height: 50%;
+        width: 100%;
+      }
+
+    .left {
+        top: 50%;
+        border: 0;
+      }
+    
+      .right {
+        bottom: 50%;
+        background-color: black;
+        color: white;
+        border: 0;
+      }
+  }
+
